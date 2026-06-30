@@ -1,233 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="John Studio is a premium spatial design studio for architecture, interiors and product design.">
-  <title>John Studio | Apple Spatial Narrative Edition</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Studio — Spatial Narrative</title>
+<meta name="description" content="We design architecture not as pages, but as spatial sequences.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div class="ambient-image" aria-hidden="true"></div>
+<body data-mode="minimal">
 
-  <header class="site-header" data-header>
-    <a class="brand" href="#top" aria-label="John Studio home">
-      <span class="brand-mark"></span>
-      <span>John Studio</span>
-    </a>
-    <nav class="site-nav" aria-label="Primary navigation">
-      <a href="#work">Work</a>
-      <a href="#services">Services</a>
-      <a href="#principles">Principles</a>
-      <a href="#contact">Contact</a>
+<!-- Background Layer -->
+<div class="bg-layer" id="bgLayer"></div>
+
+<!-- Scene Progress -->
+<nav class="scene-progress" id="sceneProgress"></nav>
+
+<!-- Mode Indicator -->
+<div class="mode-indicator" id="modeIndicator">
+  <span class="mode-dot"></span>
+  <span class="mode-name" id="modeName">Minimal</span>
+</div>
+
+<!-- Command Palette -->
+<div class="cmd-overlay" id="cmdOverlay">
+  <div class="cmd-dialog">
+    <div class="cmd-input-wrap">
+      <svg class="cmd-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M11.5 11.5L14.5 14.5M13 7.5a5.5 5.5 0 11-11 0 5.5 5.5 0 0111 0z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+      </svg>
+      <input class="cmd-input" id="cmdInput" type="text" placeholder="Type a mode \u2014 minimal, editorial, compact..." autocomplete="off" spellcheck="false">
+      <kbd class="cmd-kbd">esc</kbd>
+    </div>
+    <div class="cmd-results" id="cmdResults"></div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="hd" id="hd">
+  <div class="hd-inner">
+    <a class='hd-logo' href='/' id='hdLogo'></a>
+    <nav class="hd-nav" id="hdNav">
+      <button class="cmd-trigger" id="cmdTrigger" title="Open command palette">
+        <span class="cmd-trigger-label">Modes</span>
+        <kbd class="cmd-trigger-kbd">\u2318K</kbd>
+      </button>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <main id="top">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-media" data-parallax aria-hidden="true"></div>
-      <div class="hero-inner reveal">
-        <p class="hero-subtitle">
-          <span class="en">Architecture · Interior · Product Design</span>
-          <span class="zh">建筑设计 · 室内设计 · 产品设计</span>
-        </p>
-        <h1 id="hero-title">
-          <span class="en">Clarity in Space,<br>Objects and Experience.</span>
-          <span class="zh">以清晰的秩序，<br>设计空间、物件与体验。</span>
-        </h1>
-        <p class="hero-description">
-          <span class="en">A design studio focused on clarity, function and refined spatial experience.</span>
-          <span class="zh">专注于清晰秩序、功能逻辑与精细体验的设计工作室。</span>
-        </p>
-      </div>
-    </section>
+<!-- Scene 1: Hero -->
+<section class="scene scene-hero" id="hero" data-scene="hero">
+  <div class="hero-parallax" id="heroParallax"></div>
+  <div class="scene-inner">
+    <h1 class="hero-h" id="heroH"></h1>
+    <p class="hero-sub" id="heroSub"></p>
+  </div>
+  <div class="scene-scroll">
+    <span>Scroll</span>
+  </div>
+</section>
 
-    <section class="chapter philosophy" aria-labelledby="philosophy-title">
-      <div class="chapter-inner narrow reveal">
-        <p class="chapter-label">Philosophy</p>
-        <h2 id="philosophy-title">
-          <span class="en">Design is a system of order.</span>
-          <span class="zh">设计，是秩序的系统。</span>
-        </h2>
-        <p class="chapter-text">
-          <span class="en">We work across architecture, interiors and products through one consistent method: reduce, clarify, and refine.</span>
-          <span class="zh">我们以统一的方法处理建筑、室内与产品：减少、澄清，并精炼。</span>
-        </p>
-      </div>
-    </section>
+<!-- Scene 2: Opening Statement -->
+<section class="scene scene-statement" id="opening" data-scene="opening">
+  <div class="scene-inner">
+    <blockquote class="statement-lg" id="openingStatement"></blockquote>
+  </div>
+</section>
 
-    <section class="chapter services" id="services" aria-labelledby="services-title">
-      <div class="chapter-head reveal">
-        <p class="chapter-label">Services</p>
-        <h2 id="services-title">Three design domains.</h2>
-      </div>
+<!-- Scene 3: Works -->
+<section class="scene scene-works" id="works" data-scene="works">
+  <div class="scene-inner">
+    <div class="sec-head" id="worksHead"></div>
+    <div class="works-grid" id="workGrid"></div>
+  </div>
+</section>
 
-      <div class="domain-list">
-        <article class="domain-item reveal">
-          <p class="domain-word">Space</p>
-          <div>
-            <h3>
-              <span class="en">Architecture Design</span>
-              <span class="zh">建筑设计</span>
-            </h3>
-            <p>
-              <span class="en">Spatial concepts shaped by structure, proportion and experience.</span>
-              <span class="zh">以结构、比例与体验塑造空间概念。</span>
-            </p>
-          </div>
-        </article>
+<!-- Scene 4: Philosophy -->
+<section class="scene scene-statement scene-philosophy" id="philosophy" data-scene="philosophy">
+  <div class="scene-inner">
+    <blockquote class="statement-lg" id="philosophyStatement"></blockquote>
+  </div>
+</section>
 
-        <article class="domain-item reveal">
-          <p class="domain-word">Interior</p>
-          <div>
-            <h3>
-              <span class="en">Interior Design</span>
-              <span class="zh">室内设计</span>
-            </h3>
-            <p>
-              <span class="en">Interior systems defined by atmosphere, material and function.</span>
-              <span class="zh">以氛围、材料与功能定义室内系统。</span>
-            </p>
-          </div>
-        </article>
+<!-- Scene 5: About -->
+<section class="scene scene-about" id="about" data-scene="about">
+  <div class="scene-inner">
+    <div class="sec-head" id="aboutHead"></div>
+    <div class="about-body" id="aboutBody"></div>
+  </div>
+</section>
 
-        <article class="domain-item reveal">
-          <p class="domain-word">Object</p>
-          <div>
-            <h3>
-              <span class="en">Product Design</span>
-              <span class="zh">产品设计</span>
-            </h3>
-            <p>
-              <span class="en">Objects designed through clarity, usability and refined detail.</span>
-              <span class="zh">以清晰、可用与精细细节定义产品。</span>
-            </p>
-          </div>
-        </article>
-      </div>
-    </section>
+<!-- Scene 6: Contact -->
+<section class="scene scene-contact" id="contact" data-scene="contact">
+  <div class="scene-inner">
+    <div class="sec-head" id="contactHead"></div>
+    <div class="contact-grid" id="contactGrid"></div>
+    <footer class="scene-ft">
+      <span id="ftLeft"></span>
+      <span id="ftRight"></span>
+    </footer>
+  </div>
+</section>
 
-    <section class="chapter work" id="work" aria-labelledby="work-title">
-      <div class="chapter-head reveal">
-        <p class="chapter-label">Featured Work</p>
-        <h2 id="work-title">Spatial studies with editorial rhythm.</h2>
-      </div>
+<!-- AI Command Bar -->
+<div class="ai-bar" id="aiBar">
+  <div class="ai-bar-inner">
+    <svg class="ai-bar-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+      <path d="M2 4l6 4 6-4M2 4v8a1 1 0 001 1h10a1 1 0 001-1V4M2 4a1 1 0 011-1h10a1 1 0 011 1" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <input class="ai-bar-input" id="aiInput" type="text" autocomplete="off" spellcheck="false">
+    <kbd class="ai-bar-kbd">Enter</kbd>
+  </div>
+  <div class="ai-bar-toast" id="aiToast"></div>
+</div>
 
-      <div class="project-grid">
-        <article class="project-card project-card-large reveal">
-          <a href="#contact" aria-label="Discuss Urban Residence">
-            <figure>
-              <img src="https://placehold.co/800x600/eeeeeb/141414?text=Urban+Residence" alt="Urban residence with calm architectural light">
-            </figure>
-            <div class="project-info">
-              <span class="project-no">01</span>
-              <h3>Urban Residence</h3>
-              <p><span class="en">Architecture</span><span class="zh">建筑设计</span></p>
-              <span class="project-year">2025</span>
-            </div>
-          </a>
-        </article>
-
-        <article class="project-card reveal">
-          <a href="#contact" aria-label="Discuss Minimal Apartment">
-            <figure>
-              <img src="https://placehold.co/800x600/e4e3df/141414?text=Minimal+Apartment" alt="Minimal apartment interior with soft material palette">
-            </figure>
-            <div class="project-info">
-              <span class="project-no">02</span>
-              <h3>Minimal Apartment</h3>
-              <p><span class="en">Interior</span><span class="zh">室内设计</span></p>
-              <span class="project-year">2025</span>
-            </div>
-          </a>
-        </article>
-
-        <article class="project-card reveal">
-          <a href="#contact" aria-label="Discuss Object Light">
-            <figure>
-              <img src="https://placehold.co/800x600/f5f5f2/141414?text=Object+Light" alt="Product light object in a gallery-like spatial setting">
-            </figure>
-            <div class="project-info">
-              <span class="project-no">03</span>
-              <h3>Object Light</h3>
-              <p><span class="en">Product</span><span class="zh">产品设计</span></p>
-              <span class="project-year">2024</span>
-            </div>
-          </a>
-        </article>
-
-        <article class="project-card reveal">
-          <a href="#contact" aria-label="Discuss Spatial Study">
-            <figure>
-              <img src="https://placehold.co/800x600/deddd8/141414?text=Spatial+Study" alt="Architectural spatial study with a neutral gallery composition">
-            </figure>
-            <div class="project-info">
-              <span class="project-no">04</span>
-              <h3>Spatial Study</h3>
-              <p><span class="en">Architecture</span><span class="zh">建筑设计</span></p>
-              <span class="project-year">2024</span>
-            </div>
-          </a>
-        </article>
-      </div>
-    </section>
-
-    <section class="chapter principles" id="principles" aria-labelledby="principles-title">
-      <div class="chapter-head reveal">
-        <p class="chapter-label">Principles</p>
-        <h2 id="principles-title">The spiritual core of the work.</h2>
-      </div>
-
-      <div class="principle-list">
-        <article class="principle-item reveal">
-          <span>01</span>
-          <h3><span class="en">Less, but better.</span><span class="zh">少，但更好。</span></h3>
-        </article>
-        <article class="principle-item reveal">
-          <span>02</span>
-          <h3><span class="en">Function defines form.</span><span class="zh">功能定义形式。</span></h3>
-        </article>
-        <article class="principle-item reveal">
-          <span>03</span>
-          <h3><span class="en">Clarity over decoration.</span><span class="zh">清晰胜过装饰。</span></h3>
-        </article>
-        <article class="principle-item reveal">
-          <span>04</span>
-          <h3><span class="en">Detail builds trust.</span><span class="zh">细节建立信任。</span></h3>
-        </article>
-      </div>
-    </section>
-
-    <section class="chapter contact" id="contact" aria-labelledby="contact-title">
-      <div class="contact-inner reveal">
-        <p class="chapter-label">Contact</p>
-        <h2 id="contact-title">Begin with a clear brief.</h2>
-        <div class="contact-list">
-          <a href="mailto:971703097@qq.com">
-            <span>Email</span>
-            <strong>971703097@qq.com</strong>
-            <small>项目合作</small>
-          </a>
-          <a href="tel:+862160880126">
-            <span>WeChat</span>
-            <strong>john-studio</strong>
-            <small>微信咨询</small>
-          </a>
-          <div>
-            <span>Location</span>
-            <strong>Guangzhou</strong>
-            <small>广州</small>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <span>© 2026 John Studio</span>
-    <a href="#top">Back to top</a>
-  </footer>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
