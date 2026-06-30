@@ -18,17 +18,15 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
 });
 
 const revealTargets = [
-  ".hero-copy",
-  ".hero-media",
-  ".hero-index",
-  ".section-kicker",
-  ".studio-grid",
-  ".section-title",
-  ".work-item",
-  ".method-board article",
-  ".scope-list span",
+  ".hero-inner",
+  ".hero-visual",
+  ".section-head",
+  ".work-row",
+  ".service-item",
+  ".principle-item",
+  ".statement p",
   ".contact h2",
-  ".contact-line > *",
+  ".contact-list > *",
 ];
 
 document.querySelectorAll(revealTargets.join(",")).forEach((element) => {
