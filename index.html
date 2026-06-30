@@ -3,11 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="XUGOU is a design studio working across architecture, interiors and product design.">
-  <title>XUGOU Studio | Industrial Design Studio</title>
+  <meta name="description" content="XUGOU Studio is an architectural portfolio website for spatial design, interiors and gallery-like residential work.">
+  <title>XUGOU Studio | Architectural Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="ambient-layer" aria-hidden="true"></div>
+
   <header class="site-header" data-header>
     <a class="brand" href="#top" aria-label="XUGOU Studio home">
       <span class="brand-mark"></span>
@@ -15,134 +17,146 @@
     </a>
     <nav class="site-nav" aria-label="Primary navigation">
       <a href="#work">Work</a>
-      <a href="#services">Services</a>
-      <a href="#principles">Principles</a>
+      <a href="#studio">Studio</a>
+      <a href="#process">Process</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <main id="top">
-    <section class="hero">
-      <div class="hero-inner">
-        <p class="meta-line">Architecture · Interior · Product Design</p>
-        <h1>
-          <span class="en">Clarity in Space, Objects and Experience.</span>
-          <span class="zh">以清晰的秩序，设计空间、物件与体验。</span>
-        </h1>
-        <p class="hero-sub">
-          <span class="en">A design studio focused on clarity, function and refined spatial experience.</span>
-          <span class="zh">专注于清晰秩序、功能逻辑与精细体验的设计工作室。</span>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-bg" data-parallax aria-hidden="true"></div>
+      <div class="hero-content reveal">
+        <p class="eyebrow">Architecture · Interiors · Spatial Direction</p>
+        <h1 id="hero-title">Quiet spaces with precise emotional weight.</h1>
+        <p class="hero-copy">
+          XUGOU Studio designs residential, cultural and commercial interiors with a restrained architectural language.
         </p>
       </div>
-      <figure class="hero-visual">
-        <img src="assets/studio-hero.svg" alt="Minimal grayscale architectural composition">
-      </figure>
+      <a class="scroll-cue" href="#work" aria-label="Scroll to selected work">
+        <span>View work</span>
+      </a>
     </section>
 
-    <section class="section work" id="work">
-      <div class="section-head">
-        <p class="section-label">Selected Projects</p>
-        <p class="section-note zh">项目索引</p>
-      </div>
-      <div class="work-list" aria-label="Selected project list">
-        <a class="work-row" href="#contact">
-          <span class="work-no">01</span>
-          <span class="work-title">Urban Residence</span>
-          <span class="work-type"><span class="en">Architecture</span><span class="zh">建筑设计</span></span>
-          <span class="work-year">2025</span>
-          <span class="work-arrow" aria-hidden="true">→</span>
-        </a>
-        <a class="work-row" href="#contact">
-          <span class="work-no">02</span>
-          <span class="work-title">Minimal Apartment</span>
-          <span class="work-type"><span class="en">Interior</span><span class="zh">室内设计</span></span>
-          <span class="work-year">2025</span>
-          <span class="work-arrow" aria-hidden="true">→</span>
-        </a>
-        <a class="work-row" href="#contact">
-          <span class="work-no">03</span>
-          <span class="work-title">Object Light</span>
-          <span class="work-type"><span class="en">Product</span><span class="zh">产品设计</span></span>
-          <span class="work-year">2024</span>
-          <span class="work-arrow" aria-hidden="true">→</span>
-        </a>
+    <section class="intro section-pad" id="studio">
+      <div class="intro-grid">
+        <p class="section-kicker reveal">Studio</p>
+        <div class="intro-copy reveal">
+          <h2>We shape space through proportion, light, material and silence.</h2>
+          <p>
+            Our work removes excess until the atmosphere becomes legible. Every project is built as a spatial system: a sequence of thresholds, surfaces and daily rituals.
+          </p>
+        </div>
       </div>
     </section>
 
-    <section class="section services" id="services">
-      <div class="section-head">
-        <p class="section-label">Services</p>
-        <p class="section-note zh">服务范围</p>
+    <section class="work section-pad" id="work" aria-labelledby="work-title">
+      <div class="section-head reveal">
+        <p class="section-kicker">Selected Work</p>
+        <h2 id="work-title">Portfolio</h2>
       </div>
-      <div class="service-list">
-        <article class="service-item">
-          <h2><span class="en">Architecture Design</span><span class="zh">建筑设计</span></h2>
-          <p><span class="en">Spatial strategy, concept design and architectural expression.</span><span class="zh">空间策略、概念设计与建筑表达。</span></p>
-        </article>
-        <article class="service-item">
-          <h2><span class="en">Interior Design</span><span class="zh">室内设计</span></h2>
-          <p><span class="en">Interior systems shaped by function, material and atmosphere.</span><span class="zh">以功能、材料与氛围构建室内系统。</span></p>
-        </article>
-        <article class="service-item">
-          <h2><span class="en">Product Design</span><span class="zh">产品设计</span></h2>
-          <p><span class="en">Objects designed with clarity, usability and refined detail.</span><span class="zh">以清晰、可用与精细细节定义产品。</span></p>
-        </article>
-      </div>
-    </section>
 
-    <section class="section principles" id="principles">
-      <div class="section-head">
-        <p class="section-label">Principles</p>
-        <p class="section-note zh">设计原则</p>
-      </div>
-      <div class="principle-list">
-        <article class="principle-item">
-          <span class="principle-no">01</span>
-          <h2><span class="en">Less, but better.</span><span class="zh">少，但更好。</span></h2>
+      <div class="project-grid">
+        <article class="project-card reveal">
+          <a href="#contact" aria-label="View project Atria House">
+            <figure>
+              <img src="https://placehold.co/800x600/f1f1ef/151515?text=Atria+House" alt="Minimal architectural residence with soft courtyard light">
+            </figure>
+            <div class="project-meta">
+              <span>01</span>
+              <h3>Atria House</h3>
+              <p>Residential Architecture · 2026</p>
+            </div>
+          </a>
         </article>
-        <article class="principle-item">
-          <span class="principle-no">02</span>
-          <h2><span class="en">Function defines form.</span><span class="zh">功能定义形式。</span></h2>
+
+        <article class="project-card reveal">
+          <a href="#contact" aria-label="View project Stone Gallery">
+            <figure>
+              <img src="https://placehold.co/800x600/e6e4df/151515?text=Stone+Gallery" alt="Gallery interior with stone volume and controlled daylight">
+            </figure>
+            <div class="project-meta">
+              <span>02</span>
+              <h3>Stone Gallery</h3>
+              <p>Cultural Interior · 2025</p>
+            </div>
+          </a>
         </article>
-        <article class="principle-item">
-          <span class="principle-no">03</span>
-          <h2><span class="en">Clarity over decoration.</span><span class="zh">清晰胜过装饰。</span></h2>
+
+        <article class="project-card reveal">
+          <a href="#contact" aria-label="View project Ridge Apartment">
+            <figure>
+              <img src="https://placehold.co/800x600/dededa/151515?text=Ridge+Apartment" alt="Editorial apartment interior with warm gray material palette">
+            </figure>
+            <div class="project-meta">
+              <span>03</span>
+              <h3>Ridge Apartment</h3>
+              <p>Private Interior · 2025</p>
+            </div>
+          </a>
         </article>
-        <article class="principle-item">
-          <span class="principle-no">04</span>
-          <h2><span class="en">Detail builds trust.</span><span class="zh">细节建立信任。</span></h2>
+
+        <article class="project-card reveal">
+          <a href="#contact" aria-label="View project Object Room">
+            <figure>
+              <img src="https://placehold.co/800x600/f5f5f3/151515?text=Object+Room" alt="Spatial showroom with product display and architectural light">
+            </figure>
+            <div class="project-meta">
+              <span>04</span>
+              <h3>Object Room</h3>
+              <p>Retail Environment · 2024</p>
+            </div>
+          </a>
         </article>
       </div>
     </section>
 
-    <section class="section statement">
-      <p>
-        <span class="en">We use one method across scale: from spatial order to tactile objects, from function to experience.</span>
-        <span class="zh">我们以统一的方法处理不同尺度：从空间秩序到可触摸的物件，从功能逻辑到体验细节。</span>
-      </p>
+    <section class="feature section-pad">
+      <div class="feature-image reveal">
+        <img src="https://placehold.co/1920x1080/e9e8e4/151515?text=Spatial+Study" alt="Large architectural study image with calm gallery composition">
+      </div>
+      <div class="feature-copy reveal">
+        <p class="section-kicker">Spatial Study</p>
+        <h2>Light is treated as structure, not decoration.</h2>
+        <p>
+          Each space is developed through a slow reading of volume, circulation and shadow, allowing the experience to feel resolved before it feels styled.
+        </p>
+      </div>
     </section>
 
-    <section class="contact" id="contact">
-      <div class="contact-head">
-        <p class="section-label">Contact</p>
-        <h2><span class="en">Start with a clear brief.</span><span class="zh">从一个清晰的设计需求开始。</span></h2>
+    <section class="process section-pad" id="process">
+      <div class="section-head reveal">
+        <p class="section-kicker">Process</p>
+        <h2>From brief to atmosphere.</h2>
       </div>
-      <div class="contact-list">
-        <a href="mailto:hello@xugou.studio">
-          <span class="contact-key">Email</span>
-          <span class="contact-value">hello@xugou.studio</span>
-          <span class="zh">项目合作</span>
-        </a>
-        <a href="tel:+862160880126">
-          <span class="contact-key">WeChat</span>
-          <span class="contact-value">xugou-studio</span>
-          <span class="zh">微信咨询</span>
-        </a>
-        <span>
-          <span class="contact-key">Location</span>
-          <span class="contact-value">China / Global</span>
-          <span class="zh">中国 / 全球</span>
-        </span>
+      <div class="process-list">
+        <article class="process-item reveal">
+          <span>01</span>
+          <h3>Spatial Strategy</h3>
+          <p>We clarify the role of the site, users, constraints and emotional direction before form is introduced.</p>
+        </article>
+        <article class="process-item reveal">
+          <span>02</span>
+          <h3>Material System</h3>
+          <p>Surfaces, edges and junctions are composed as one quiet language across the project.</p>
+        </article>
+        <article class="process-item reveal">
+          <span>03</span>
+          <h3>Detail Control</h3>
+          <p>The final experience is refined through proportion, lighting rhythm and construction-level decisions.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact section-pad" id="contact">
+      <div class="contact-inner reveal">
+        <p class="section-kicker">Contact</p>
+        <h2>Start a spatial commission.</h2>
+        <div class="contact-row">
+          <a href="mailto:hello@xugou.studio">hello@xugou.studio</a>
+          <span>China / Global</span>
+          <span>WeChat: xugou-studio</span>
+        </div>
       </div>
     </section>
   </main>

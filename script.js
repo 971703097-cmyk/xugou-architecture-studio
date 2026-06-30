@@ -1,11 +1,18 @@
 const header = document.querySelector("[data-header]");
+const parallaxLayer = document.querySelector("[data-parallax]");
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-const updateHeader = () => {
-  header.classList.toggle("is-scrolled", window.scrollY > 24);
+const updateChrome = () => {
+  const offset = window.scrollY;
+  header.classList.toggle("is-scrolled", offset > 24);
+
+  if (parallaxLayer && !reduceMotion) {
+    parallaxLayer.style.transform = `translate3d(0, ${offset * 0.14}px, 0) scale(1.04)`;
+  }
 };
 
-updateHeader();
-window.addEventListener("scroll", updateHeader, { passive: true });
+updateChrome();
+window.addEventListener("scroll", updateChrome, { passive: true });
 
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener("click", (event) => {
@@ -13,38 +20,26 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
     if (!target) return;
 
     event.preventDefault();
-    target.scrollIntoView({ behavior: "smooth", block: "start" });
+    target.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
   });
 });
 
-const revealTargets = [
-  ".hero-inner",
-  ".hero-visual",
-  ".section-head",
-  ".work-row",
-  ".service-item",
-  ".principle-item",
-  ".statement p",
-  ".contact h2",
-  ".contact-list > *",
-];
+const revealElements = document.querySelectorAll(".reveal");
 
-document.querySelectorAll(revealTargets.join(",")).forEach((element) => {
-  element.classList.add("reveal");
-});
+if ("IntersectionObserver" in window && !reduceMotion) {
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.14, rootMargin: "0px 0px -10% 0px" }
+  );
 
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
-);
-
-document.querySelectorAll(".reveal").forEach((element) => {
-  revealObserver.observe(element);
-});
+  revealElements.forEach((element) => revealObserver.observe(element));
+} else {
+  revealElements.forEach((element) => element.classList.add("is-visible"));
+}
