@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="Minimal modern architecture courtyard">
   <defs>
     <linearGradient id="sky" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0" stop-color="#d8d3c8"/>
-      <stop offset="0.55" stop-color="#eee9df"/>
-      <stop offset="1" stop-color="#b9afa1"/>
+      <stop offset="0" stop-color="#d8d8d6"/>
+      <stop offset="0.55" stop-color="#f2f2f0"/>
+      <stop offset="1" stop-color="#b9b9b7"/>
     </linearGradient>
     <linearGradient id="shade" x1="0" x2="1">
       <stop offset="0" stop-color="#1b1916" stop-opacity=".22"/>
@@ -11,20 +11,20 @@
     </linearGradient>
   </defs>
   <rect width="1600" height="900" fill="url(#sky)"/>
-  <rect y="645" width="1600" height="255" fill="#c8c0b4"/>
-  <path d="M0 675h1600v225H0z" fill="#a9a093" opacity=".28"/>
-  <path d="M145 265h540v315H145z" fill="#e7e2d8"/>
-  <path d="M685 210h770v370H685z" fill="#d4cec3"/>
+  <rect y="645" width="1600" height="255" fill="#c8c8c6"/>
+  <path d="M0 675h1600v225H0z" fill="#a7a7a5" opacity=".28"/>
+  <path d="M145 265h540v315H145z" fill="#e7e7e4"/>
+  <path d="M685 210h770v370H685z" fill="#d2d2cf"/>
   <path d="M760 285h560v225H760z" fill="#1a1a18"/>
-  <path d="M812 318h456v160H812z" fill="#a7b1ae" opacity=".7"/>
-  <path d="M145 580h1310v68H145z" fill="#7f766b"/>
+  <path d="M812 318h456v160H812z" fill="#a9a9a7" opacity=".7"/>
+  <path d="M145 580h1310v68H145z" fill="#777775"/>
   <path d="M230 345h250v235H230z" fill="#282521"/>
-  <path d="M280 390h155v155H280z" fill="#aab0aa" opacity=".66"/>
-  <path d="M540 308h145v272H540z" fill="#b9b1a5"/>
+  <path d="M280 390h155v155H280z" fill="#ababaa" opacity=".66"/>
+  <path d="M540 308h145v272H540z" fill="#b8b8b5"/>
   <path d="M0 648h1600l-210 120H210z" fill="url(#shade)"/>
-  <path d="M930 590l410 230H720l-300-230z" fill="#6f321f" opacity=".22"/>
-  <path d="M95 650h1290" stroke="#f7f3ea" stroke-opacity=".6" stroke-width="4"/>
-  <path d="M685 210v438M145 265v383M145 580h1310" stroke="#f7f3ea" stroke-opacity=".45" stroke-width="3"/>
-  <path d="M1285 555c45-92 83-92 126 0" fill="none" stroke="#5d6b54" stroke-width="18" stroke-linecap="round"/>
-  <path d="M1210 575c28-58 57-58 87 0" fill="none" stroke="#6b765e" stroke-width="14" stroke-linecap="round"/>
+  <path d="M930 590l410 230H720l-300-230z" fill="#6a6a68" opacity=".22"/>
+  <path d="M95 650h1290" stroke="#f7f7f5" stroke-opacity=".6" stroke-width="4"/>
+  <path d="M685 210v438M145 265v383M145 580h1310" stroke="#f7f7f5" stroke-opacity=".45" stroke-width="3"/>
+  <path d="M1285 555c45-92 83-92 126 0" fill="none" stroke="#626260" stroke-width="18" stroke-linecap="round"/>
+  <path d="M1210 575c28-58 57-58 87 0" fill="none" stroke="#747472" stroke-width="14" stroke-linecap="round"/>
 </svg>
