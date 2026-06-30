@@ -287,21 +287,21 @@ h1 {
 }
 
 .visual-one {
-  background-image: linear-gradient(135deg, rgba(25, 24, 22, 0.08), rgba(25, 24, 22, 0.2)), url("assets/studio-hero.png");
+  background-image: linear-gradient(135deg, rgba(25, 24, 22, 0.08), rgba(25, 24, 22, 0.2)), url("assets/studio-hero.svg");
 }
 
 .visual-two {
   background-image:
     linear-gradient(90deg, rgba(244, 241, 235, 0.9) 0 18%, transparent 18% 100%),
     linear-gradient(0deg, rgba(165, 77, 47, 0.12), rgba(25, 24, 22, 0.1)),
-    url("assets/studio-hero.png");
+    url("assets/studio-hero.svg");
   background-position: 65% center;
 }
 
 .visual-three {
   background-image:
     linear-gradient(135deg, rgba(25, 24, 22, 0.42), rgba(25, 24, 22, 0.02)),
-    url("assets/studio-hero.png");
+    url("assets/studio-hero.svg");
   background-position: right center;
 }
 
