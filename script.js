@@ -1,13 +1,15 @@
 const header = document.querySelector("[data-header]");
 const parallaxLayer = document.querySelector("[data-parallax]");
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const isCoarsePointer = window.matchMedia("(pointer: coarse)").matches;
 
 const updateChrome = () => {
   const offset = window.scrollY;
   header.classList.toggle("is-scrolled", offset > 24);
 
   if (parallaxLayer && !reduceMotion) {
-    parallaxLayer.style.transform = `translate3d(0, ${offset * 0.14}px, 0) scale(1.04)`;
+    const intensity = isCoarsePointer ? 0.06 : 0.12;
+    parallaxLayer.style.transform = `translate3d(0, ${offset * intensity}px, 0) scale(1.04)`;
   }
 };
 
@@ -22,6 +24,10 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
     event.preventDefault();
     target.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
   });
+});
+
+document.querySelectorAll(".project-card, .principle-item, .domain-item").forEach((element, index) => {
+  element.style.setProperty("--delay", `${Math.min(index * 90, 360)}ms`);
 });
 
 const revealElements = document.querySelectorAll(".reveal");
