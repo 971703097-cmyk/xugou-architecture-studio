@@ -1,0 +1,397 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #171717;
+  background: #f8f8f5;
+  letter-spacing: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.mono-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 54px;
+  padding: 0 clamp(22px, 5vw, 72px);
+  background: rgba(248,248,245,0.78);
+  backdrop-filter: blur(18px);
+  transition: transform 0.45s ease-out, background 0.45s ease-out;
+}
+
+.mono-nav.is-hidden {
+  transform: translateY(-100%);
+}
+
+.mono-nav > a {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.mono-nav nav {
+  display: flex;
+  gap: 28px;
+}
+
+.mono-nav nav a {
+  font-size: 13px;
+  color: rgba(23,23,23,0.66);
+}
+
+.mono-hero {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #111;
+}
+
+.mono-hero img,
+.mono-image img,
+.mono-spread img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mono-hero img {
+  position: absolute;
+  inset: 0;
+}
+
+.mono-hero-scrim {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,0.04), rgba(0,0,0,0.18) 48%, rgba(0,0,0,0.58)),
+    linear-gradient(to right, rgba(0,0,0,0.28), rgba(0,0,0,0));
+}
+
+.mono-hero-copy {
+  position: absolute;
+  left: clamp(24px, 7vw, 104px);
+  bottom: clamp(56px, 11vh, 120px);
+  width: min(760px, calc(100vw - 48px));
+  color: #fff;
+  opacity: 0;
+  transform: translateY(16px);
+  animation: heroIn 1s ease-out 0.9s forwards;
+}
+
+@keyframes heroIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mono-hero-copy p,
+.mono-label {
+  margin: 0 0 18px;
+  font-size: 12px;
+  line-height: 1.4;
+  font-weight: 600;
+  color: rgba(255,255,255,0.76);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.mono-hero-copy h1 {
+  margin: 0;
+  font-size: clamp(48px, 6.4vw, 78px);
+  line-height: 1.02;
+  font-weight: 500;
+}
+
+.mono-hero-copy .cn {
+  display: block;
+  margin-top: 18px;
+  font-size: clamp(17px, 2vw, 22px);
+  line-height: 1.6;
+  font-weight: 300;
+  color: rgba(255,255,255,0.72);
+}
+
+.mono-intro {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 132px 32px 120px;
+}
+
+.mono-intro-meta {
+  grid-column: 1 / span 3;
+  display: grid;
+  gap: 26px;
+  align-content: start;
+}
+
+.mono-meta-item span {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #8a8a84;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.mono-meta-item strong {
+  display: block;
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.mono-lead {
+  grid-column: 5 / span 7;
+}
+
+.mono-lead .en {
+  display: block;
+  font-size: 22px;
+  line-height: 1.56;
+  font-weight: 400;
+  color: #20201e;
+}
+
+.mono-lead .cn {
+  display: block;
+  margin-top: 34px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #666660;
+}
+
+.mono-image {
+  width: 100%;
+  overflow: hidden;
+  background: #e8e7e1;
+}
+
+.mono-image-large {
+  height: min(86vw, 920px);
+  max-height: 92vh;
+}
+
+.mono-image img,
+.mono-spread img {
+  transition: transform 0.9s ease-out;
+}
+
+.mono-image:hover img,
+.mono-spread figure:hover img {
+  transform: scale(1.02);
+}
+
+.mono-text-break {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 126px 32px;
+}
+
+.mono-text-break p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.74;
+  color: #242420;
+}
+
+.mono-spread {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 20px;
+  padding: 0 20px 128px;
+}
+
+.mono-spread figure {
+  margin: 0;
+  height: 72vw;
+  max-height: 840px;
+  min-height: 560px;
+  overflow: hidden;
+  background: #e8e7e1;
+}
+
+.mono-notes {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 32px 132px;
+}
+
+.mono-notes > div:first-child {
+  grid-column: 1 / span 4;
+}
+
+.mono-notes h2 {
+  margin: 0;
+  max-width: 300px;
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.1;
+  font-weight: 500;
+}
+
+.mono-notes .mono-label {
+  color: #8a8a84;
+}
+
+.mono-note-list {
+  grid-column: 6 / span 7;
+  display: grid;
+  gap: 40px;
+}
+
+.mono-note {
+  border-top: 1px solid #d8d7d0;
+  padding-top: 24px;
+}
+
+.mono-note span {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: #8a8a84;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.mono-note p {
+  margin: 0;
+  max-width: 620px;
+  font-size: 16px;
+  line-height: 1.72;
+  color: #242420;
+}
+
+.mono-image-closing {
+  height: 94vh;
+}
+
+.mono-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 84px 32px 118px;
+}
+
+.mono-footer a {
+  font-size: 14px;
+  color: #242420;
+  border-bottom: 1px solid rgba(36,36,32,0.28);
+  padding-bottom: 4px;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 760px) {
+  .mono-nav {
+    height: 48px;
+    padding: 0 20px;
+  }
+
+  .mono-nav nav a:first-child {
+    display: none;
+  }
+
+  .mono-nav nav a:last-child {
+    font-size: 12px;
+  }
+
+  .mono-hero-copy {
+    left: 24px;
+    bottom: 54px;
+    width: min(310px, calc(100vw - 48px));
+  }
+
+  .mono-hero-copy h1 {
+    font-size: 38px;
+    overflow-wrap: normal;
+  }
+
+  .mono-intro {
+    display: block;
+    padding: 92px 24px 86px;
+  }
+
+  .mono-intro-meta {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-bottom: 54px;
+  }
+
+  .mono-lead .en {
+    font-size: 19px;
+    line-height: 1.62;
+  }
+
+  .mono-image-large {
+    height: 118vw;
+    max-height: none;
+  }
+
+  .mono-text-break {
+    padding: 84px 24px;
+  }
+
+  .mono-spread {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 0 0 92px;
+  }
+
+  .mono-spread figure {
+    min-height: 0;
+    height: 118vw;
+  }
+
+  .mono-notes {
+    display: block;
+    padding: 0 24px 96px;
+  }
+
+  .mono-notes h2 {
+    margin-bottom: 48px;
+  }
+
+  .mono-image-closing {
+    height: 92vh;
+  }
+
+  .mono-footer {
+    flex-direction: column;
+    padding: 70px 24px 96px;
+  }
+}

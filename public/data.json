@@ -1,0 +1,237 @@
+{
+  "studioName": {
+    "en": "John Studio",
+    "cn": "John Studio"
+  },
+  "tagline": {
+    "en": "Spatial Narrative.",
+    "cn": "空间叙事设计系统。"
+  },
+  "heroSubtitle": {
+    "en": "A spatial design system that adapts. Type natural language or press Cmd+K to reshape the layout.",
+    "cn": "一个自适应的空间设计系统。输入自然语言或按 Cmd+K 切换布局。"
+  },
+  "aiPrompt": {
+    "en": "Try: make it more Apple / luxury / commercial / editorial...",
+    "cn": "试试：极简 / 奢华 / 商业 / 编辑风格..."
+  },
+  "heroImage": "https://placehold.co/1920x1080/0a0a0a/0a0a0a",
+  "bgLayer": "https://placehold.co/1920x1080/e8e8ed/e8e8ed",
+  "scenes": [
+    { "id": "hero", "label": "Intro" },
+    { "id": "opening", "label": "Vision" },
+    { "id": "works", "label": "Work" },
+    { "id": "philosophy", "label": "Philosophy" },
+    { "id": "about", "label": "About" },
+    { "id": "contact", "label": "Contact" }
+  ],
+  "openingStatement": {
+    "en": "We design architecture not as pages, but as spatial sequences.",
+    "cn": "我们设计建筑般的空间序列，而非单一页面。"
+  },
+  "philosophyStatement": {
+    "en": "Each project is not an item. It is a spatial experience.",
+    "cn": "每一个项目都不是一个条目，而是一段空间体验。"
+  },
+  "sections": {
+    "works": {
+      "en": "Selected Work",
+      "cn": "精选作品"
+    },
+    "about": {
+      "en": "About",
+      "cn": "关于我们"
+    },
+    "contact": {
+      "en": "Contact",
+      "cn": "联系方式"
+    },
+    "back": {
+      "en": "All Projects",
+      "cn": "返回"
+    },
+    "viewProject": {
+      "en": "View Project",
+      "cn": "查看项目"
+    }
+  },
+  "aboutText": {
+    "en": "We are a design studio focused on industrial design and visual systems. Through structured methodology, we build clear and sustainable design frameworks for every project.",
+    "cn": "我们是一间专注于工业设计与视觉系统的设计工作室。以结构化的方法论，为每个项目构建清晰、可持续的设计体系。"
+  },
+  "aboutStatement": {
+    "en": "Every object is a node in a larger system. We design the connections that make them meaningful.",
+    "cn": "每一件物品都是更大系统中的节点。我们设计的是赋予它们意义的连接。"
+  },
+  "contact": {
+    "email": "971703097@qq.com",
+    "location": {
+      "en": "Guangzhou, China",
+      "cn": "中国 · 广州"
+    }
+  },
+  "modes": {
+    "minimal": {
+      "en": "Minimal",
+      "cn": "极简",
+      "keywords": ["apple", "minimal", "clean", "default", "spacious"],
+      "description": "Generous whitespace, 2-column grid, Apple spacing"
+    },
+    "editorial": {
+      "en": "Editorial",
+      "cn": "编辑",
+      "keywords": ["exhibition", "editorial", "gallery", "magazine", "art"],
+      "description": "Single-column centered, serif display, gallery aesthetic"
+    },
+    "compact": {
+      "en": "Compact",
+      "cn": "紧凑",
+      "keywords": ["commercial", "compact", "dense", "catalog", "grid"],
+      "description": "3-column grid, reduced spacing, catalog layout"
+    },
+    "luxury": {
+      "en": "Luxury",
+      "cn": "奢华",
+      "keywords": ["luxury", "premium", "high-end", "elegant", "refined", "gold", "boutique"],
+      "description": "Ultra-generous spacing, warm palette, serif display, refined details"
+    },
+    "structured": {
+      "en": "Structured",
+      "cn": "结构化",
+      "keywords": ["structured", "corporate", "professional", "systematic", "organized", "business"],
+      "description": "Rigid grid, technical typography, data-driven, corporate aesthetic"
+    }
+  },
+  "projects": [
+    {
+      "title": {
+        "en": "Industrial Design System A",
+        "cn": "工业设计系统 A"
+      },
+      "desc": {
+        "en": "Minimal system design redefining the unity of form and function through modular thinking.",
+        "cn": "以模块化思维重新定义产品形态与功能统一关系的极简系统设计。"
+      },
+      "detail": {
+        "en": "This project centers on systematic methodology, building a sustainable and iterative design framework through deep research in materials, craftsmanship, and user behavior. Each product is a node within the system, independent yet interconnected.",
+        "cn": "该项目以系统化方法论为核心，通过对材料、工艺与用户行为的深入研究，构建一套可持续迭代的设计框架。每一件产品都是系统中的节点，既独立又互联。"
+      },
+      "concept": {
+        "en": "The project is arranged as a quiet architectural sequence. Objects, surfaces, and circulation are treated as one continuous field, allowing the visitor to read the system through proportion, pause, and material restraint.",
+        "cn": "项目被组织成一段安静的建筑序列。物件、表面与动线被视为一个连续场域，让使用者通过比例、停顿与材料克制来阅读系统。"
+      },
+      "year": "2025",
+      "location": "Guangzhou, China",
+      "scale": "420 sq m",
+      "category": {
+        "en": "Industrial Design",
+        "cn": "工业设计"
+      },
+      "image": "https://placehold.co/800x600/e5e5e5/999999?text=Industrial+Design+System+A",
+      "imageFull": "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1920&q=80",
+      "gallery": [
+        {
+          "src": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=80",
+          "alt": "Long interior view of Industrial Design System A"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1200&q=80",
+          "alt": "Vertical material detail"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80",
+          "alt": "Sequential gallery space"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1800&q=80",
+          "alt": "Material and plan study"
+        }
+      ],
+      "technicalNotes": [
+        {
+          "label": "Material",
+          "value": "Brushed aluminum, honed stone, translucent acrylic, and warm white indirect light."
+        },
+        {
+          "label": "Concept",
+          "value": "A modular spatial order where product, display, and circulation share the same proportional grid."
+        },
+        {
+          "label": "Detail",
+          "value": "All visible joints are reduced to thin shadow gaps so the system reads as a continuous architectural plane."
+        }
+      ],
+      "closingImage": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1920&q=80",
+      "specs": [
+        { "label": "Scope", "value": "Product System" },
+        { "label": "Duration", "value": "12 months" },
+        { "label": "Team", "value": "6 designers" }
+      ]
+    },
+    {
+      "title": {
+        "en": "Brand Visual System B",
+        "cn": "品牌视觉体系 B"
+      },
+      "desc": {
+        "en": "Reshaping brand identity through architectural visual language, establishing a complete visual order from logotype to layout.",
+        "cn": "以建筑感视觉语言重塑品牌识别系统，建立从标识到版式的完整视觉秩序。"
+      },
+      "detail": {
+        "en": "The brand system extends from the core logotype to color, typography, layout, and application guidelines. Every element is precisely calculated to ensure consistent visual experience across all media.",
+        "cn": "品牌体系的构建从核心标识出发，延伸至色彩、字体、版式与应用规范。每一个元素都经过精确计算，确保在不同媒介上保持一致的视觉体验。"
+      },
+      "concept": {
+        "en": "This identity is treated as an exhibition route rather than a graphic package. Each surface becomes a page, each page becomes a room, and the brand is revealed through measured contrast and repeated spatial rhythm.",
+        "cn": "该识别体系被视为一条展览路径，而非单纯的图形包装。每个表面是一页，每一页又像一个房间，品牌通过克制的对比与重复的空间节奏逐步显现。"
+      },
+      "year": "2024",
+      "location": "Shenzhen, China",
+      "scale": "Identity system / 36 applications",
+      "category": {
+        "en": "Brand Design",
+        "cn": "品牌设计"
+      },
+      "image": "https://placehold.co/800x600/dcdcdc/999999?text=Brand+Visual+System+B",
+      "imageFull": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1920&q=80",
+      "gallery": [
+        {
+          "src": "https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?auto=format&fit=crop&w=1800&q=80",
+          "alt": "Identity wall installation"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1200&q=80",
+          "alt": "Printed matter detail"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1800&q=80",
+          "alt": "Exhibition grid system"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1800&q=80",
+          "alt": "Brand application sequence"
+        }
+      ],
+      "technicalNotes": [
+        {
+          "label": "Typography",
+          "value": "A restrained grotesk type system is paired with generous margins and strict baseline intervals."
+        },
+        {
+          "label": "Material",
+          "value": "Uncoated paper, matte vinyl, brushed steel signage, and low-contrast neutral backgrounds."
+        },
+        {
+          "label": "Concept",
+          "value": "The identity behaves like an architectural grid, giving every format a calm and repeatable order."
+        }
+      ],
+      "closingImage": "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1920&q=80",
+      "specs": [
+        { "label": "Scope", "value": "Brand Identity" },
+        { "label": "Duration", "value": "8 months" },
+        { "label": "Team", "value": "4 designers" }
+      ]
+    }
+  ]
+}
